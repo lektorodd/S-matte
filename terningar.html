@@ -48,11 +48,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Numpy vs Random" href="intro-importering.html" />
+    <link rel="prev" title="Jupyter Lab" href="jupyter-lab.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,6 +98,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="intro-importering.html">
    Numpy vs Random
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-lab.html">
+   Jupyter Lab
   </a>
  </li>
 </ul>
@@ -311,11 +314,9 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="terningar">
 <h1>Terningar<a class="headerlink" href="#terningar" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Merk
-Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html?highlight=random#module-numpy.random">dokumentasjonen</a>)</p>
-</div>
+<p>:::{note}Merk
+Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html?highlight=random#module-numpy.random">dokumentasjonen</a>)
+:::</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                                 <span class="c1"># Importerer numpy som np</span>
@@ -337,7 +338,7 @@ Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -351,16 +352,16 @@ Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
 2
-5
-4
-5
-4
-6
+2
+1
+2
+3
 3
 4
-5
+3
+3
 </pre></div>
 </div>
 </div>
@@ -374,7 +375,7 @@ Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3 4 4 5 2 6 5 3 3 6]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4 1 1 4 6 1 4 3 1 3]
 </pre></div>
 </div>
 </div>
@@ -423,7 +424,7 @@ Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for å trilla 5 eller høgare er 0.333
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for å trilla 5 eller høgare er 0.334
 </pre></div>
 </div>
 </div>
@@ -482,16 +483,14 @@ Eg nyttar den anbefalte måten å nytta numpy.random (sjekk <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at produktet av to terningar er 8 eller mindre er 0.445
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at produktet av to terningar er 8 eller mindre er 0.444
 </pre></div>
 </div>
 </div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Tips
-Kodelinja <code class="docutils literal notranslate"><span class="pre">produkt</span> <span class="pre">=</span> <span class="pre">terning1</span> <span class="pre">*</span> <span class="pre">terning2</span></code> finn produktet av element på samme plass i dei to arrayene</p>
-</div>
+<p>:::{tip} Tips</p>
+<p>Kodelinja <code class="docutils literal notranslate"><span class="pre">produkt</span> <span class="pre">=</span> <span class="pre">terning1</span> <span class="pre">*</span> <span class="pre">terning2</span></code> finn produktet av element på samme plass i dei to arrayene</p>
+<p>:::</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -550,8 +549,9 @@ I dømet ser me på sannsynet for å trilla 4 på ein terning.</p>
 </div>
 </div>
 <p>Her ser me at di fleire kast me gjennomfører, di nærare kjem den relative frekvensen den teoretiske verdien for å trilla ein firar på vanleg terning.</p>
-<div class="math notranslate nohighlight">
-\[P(\text{firar}) = \frac{1}{6} \approx 0.167\]</div>
+<p>:::{math}
+P(\text{firar}) = \frac{1}{6} \approx 0.167
+:::</p>
 </div>
 </div>
 
@@ -580,11 +580,11 @@ I dømet ser me på sannsynet for å trilla 4 på ein terning.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro-importering.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="jupyter-lab.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Numpy vs Random</p>
+            <p class="prev-next-title">Jupyter Lab</p>
         </div>
     </a>
 </div>
