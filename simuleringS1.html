@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; Matematikk for samfunnsfag</title>
+    <title>Simulering &#8212; Matematikk for samfunnsfag</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -33,7 +33,6 @@
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -49,19 +48,16 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Terningar" href="terningar.html" />
+    <link rel="prev" title="Jupyter Lab" href="jupyter-lab.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -82,7 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
       <h1 class="site-logo" id="site-title">Matematikk for samfunnsfag</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -116,12 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
   S1
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="simuleringS1.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Simulering
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -172,6 +168,23 @@ const thebe_selector_output = ".output, .cell_output"
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/simuleringS1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -195,7 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Simulering</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -206,42 +219,53 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <h1 id="search-documentation">Search</h1>
-  
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="simulering">
+<h1>Simulering<a class="headerlink" href="#simulering" title="Permalink to this headline">¶</a></h1>
+<p>I det følgjande kapittelet skal me sjå på korleis me kan simulera ulike stokastiske forsøk i Python.</p>
+<p>Me startar enkelt med terningar<strong>link</strong>. Så ser me på nokre samansette forsøk<strong>link</strong>. Vidare ser me på binomisk og hypergeometrisk sannsyn<strong>link</strong>. Til slutt kjem det eit par eksamensoppgåver som er løyst ved hjelp av simulering i Python<strong>link</strong>.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="jupyter-lab.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Jupyter Lab</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="terningar.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Terningar</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samansette forsøk - choice &#8212; Matematikk for samfunnsfag</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Terningar" href="terningar.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk for samfunnsfag</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Matematikk for samfunnsfag
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Generelt
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro-importering.html">
+   Numpy vs Random
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-lab.html">
+   Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  S1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="simuleringS1.html">
+   Simulering
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="terningar.html">
+     Terningar
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Samansette forsøk - choice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/samansetteforsøk.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/lektorodd/S-matte/master?urlpath=tree/samansetteforsøk.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teoretisk-sannsyn">
+   Teoretisk sannsyn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulering-av-twist-trekket">
+   Simulering av twist-trekket
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#med-tilbakelegging">
+     Med tilbakelegging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utan-tilbakelegging">
+     Utan tilbakelegging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ikkje-uniforme-sannsynsmodellar">
+   Ikkje uniforme sannsynsmodellar
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Samansette forsøk - choice</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teoretisk-sannsyn">
+   Teoretisk sannsyn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulering-av-twist-trekket">
+   Simulering av twist-trekket
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#med-tilbakelegging">
+     Med tilbakelegging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utan-tilbakelegging">
+     Utan tilbakelegging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ikkje-uniforme-sannsynsmodellar">
+   Ikkje uniforme sannsynsmodellar
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="samansette-forsok-choice">
+<h1>Samansette forsøk - choice<a class="headerlink" href="#samansette-forsok-choice" title="Permalink to this headline">¶</a></h1>
+<p>No skal me sjå på korleis me kan simulera eit enkelt samansett forsøk. Oppgåva me skal sjå på er denne:</p>
+<blockquote>
+<div><p>I ei skål ligg det 7 banan-twist og 3 daim-twist. Kva er sannsynet for at me får banan når me trekk ut to bitar frå skåla. (Både med og utan tilbakelegging)</p>
+</div></blockquote>
+<div class="section" id="teoretisk-sannsyn">
+<h2>Teoretisk sannsyn<a class="headerlink" href="#teoretisk-sannsyn" title="Permalink to this headline">¶</a></h2>
+<p>Først kan me sjå på kva det teoretiske sannsynet er for desse to. Ofte når me bruker simulering er det fordi det er vanskeleg å finna svaret ved rekning, men i dette dømet er det ikkje så vanskeleg.</p>
+<p><strong>Med tilbakelegging</strong>
+$$P(\text{BB}) = \frac{7}{10} \cdot \frac{7}{10} = \frac{49}{100} = 0.490 $$</p>
+<p><strong>Utan tilbekelegging</strong>
+$$P(\text{BB}) = \frac{7}{10} \cdot \frac{6}{9} = \frac{42}{90} \approx 0.467 $$</p>
+</div>
+<div class="section" id="simulering-av-twist-trekket">
+<h2>Simulering av twist-trekket<a class="headerlink" href="#simulering-av-twist-trekket" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importerar og lagar ein random generator</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+
+<span class="c1"># antall simuleringar</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+
+<span class="c1"># lagar liste med twistskåla</span>
+<span class="n">twistskål</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Banan&quot;</span><span class="p">]</span><span class="o">*</span><span class="mi">7</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Daim&quot;</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+
+<span class="c1"># skriv ut twistskåla</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">twistskål</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Banan&#39;, &#39;Banan&#39;, &#39;Banan&#39;, &#39;Banan&#39;, &#39;Banan&#39;, &#39;Banan&#39;, &#39;Banan&#39;, &#39;Daim&#39;, &#39;Daim&#39;, &#39;Daim&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="med-tilbakelegging">
+<h3>Med tilbakelegging<a class="headerlink" href="#med-tilbakelegging" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BB</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">twist</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">twistskål</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">twist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span> <span class="ow">and</span> <span class="n">twist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span><span class="p">:</span>
+        <span class="n">BB</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">rel_frek</span> <span class="o">=</span> <span class="n">BB</span><span class="o">/</span><span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at me trekk to banantwist er </span><span class="si">{</span><span class="n">rel_frek</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at me trekk to banantwist er 0.490314
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For ein litt meir elegant kode <em>kan</em> me droppa if-setningen i løkka vår.
+Dette kan me gjera ved å gjera ein boolsk variabel (<code class="docutils literal notranslate"><span class="pre">True</span></code> eller <code class="docutils literal notranslate"><span class="pre">False</span></code>) om til eit heiltal. Då blir <code class="docutils literal notranslate"><span class="pre">True</span> <span class="pre">=</span> <span class="pre">1</span></code> og <code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BB</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">twist</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">twistskål</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">BB</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">twist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span> <span class="ow">and</span> <span class="n">twist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span><span class="p">)</span>
+
+<span class="n">rel_frek</span> <span class="o">=</span> <span class="n">BB</span><span class="o">/</span><span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at me trekk to banantwist er </span><span class="si">{</span><span class="n">rel_frek</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at me trekk to banantwist er 0.490577
+</pre></div>
+</div>
+</div>
+</div>
+<p>Me kan sjå kor langt unna den teoretiske verdien me kjem:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feil</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rel_frek</span> <span class="o">-</span> <span class="mi">49</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Feilen blir </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">feil</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s2"> når me gjer </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s2"> simuleringar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Feilen blir 0.000577 når me gjer 1000000 simuleringar
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dersom me vil ha eit enno meir nøyaktig resultat kan me gjera fleire simuleringar, dette kjem me litt attende til seinare. Merk at programmet vil fort ta ganske lang tid å køyra etter kvart som talet på simuleringar aukar.</p>
+</div>
+<div class="section" id="utan-tilbakelegging">
+<h3>Utan tilbakelegging<a class="headerlink" href="#utan-tilbakelegging" title="Permalink to this headline">¶</a></h3>
+<p>Forskjellen blir ikkje stor her. Det einaste me gjer er å legga til <code class="docutils literal notranslate"><span class="pre">replace</span> <span class="pre">=</span> <span class="pre">False</span></code> som argument i <code class="docutils literal notranslate"><span class="pre">choice</span></code>-funksjonen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BB</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">twist</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">twistskål</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">twist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span> <span class="ow">and</span> <span class="n">twist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Banan&quot;</span><span class="p">:</span>
+        <span class="n">BB</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">rel_frek</span> <span class="o">=</span> <span class="n">BB</span><span class="o">/</span><span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at me trekk to banantwist er </span><span class="si">{</span><span class="n">rel_frek</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at me trekk to banantwist er 0.466847
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feil</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rel_frek</span> <span class="o">-</span> <span class="mi">42</span><span class="o">/</span><span class="mi">90</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Feilen blir </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">feil</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s2"> når me gjer </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s2"> simuleringar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Feilen blir 0.00018 når me gjer 1000000 simuleringar
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ikkje-uniforme-sannsynsmodellar">
+<h2>Ikkje uniforme sannsynsmodellar<a class="headerlink" href="#ikkje-uniforme-sannsynsmodellar" title="Permalink to this headline">¶</a></h2>
+<p>Dette dømet me har sett på er eit døme på ein ikkje-uniform sannsynsmodell, sidan sannsynet for Banan og Daim ikkje er det same. I starten laga me ei liste med alle twistane i skåla. I dette dømet er det praktisk, sidan me har eit lite utfallsrom (banan og daim) og kontroll på kor mange det er av kvar.</p>
+<p>Av og til kan det vera nyttig å definera ikkje-uniforme sannsynsmodellar på ein litt anna måte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">twistar</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Banan&quot;</span><span class="p">,</span> <span class="s2">&quot;Daim&quot;</span><span class="p">]</span>
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="n">to_twist</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">twistar</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">sannsyn</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Me trekk </span><span class="si">{</span><span class="n">to_twist</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Me trekk [&#39;Daim&#39; &#39;Banan&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dette kan brukast viss me veit utfallsrommet og sannsynet for kvart av utfalla, ikkje nødvendigvis antallet. F.eks. blodtype hos tilfeldige personar i befolkningen.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="terningar.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Terningar</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Torodd F. Ottestad<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
