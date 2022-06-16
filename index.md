@@ -1,4 +1,4 @@
-# Matematikk for samfunnsfag
+# Intro
 
 ```{admonition} Obs!
 :class: warning
