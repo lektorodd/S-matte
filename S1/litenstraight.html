@@ -249,6 +249,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/lektorodd/S-matte/main?urlpath=tree/S1/litenstraight.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -379,6 +408,63 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="liten-straight">
 <h1>Liten straight<a class="headerlink" href="#liten-straight" title="Permalink to this headline">#</a></h1>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Hint</p>
+<p>Start enkelt og bygg ut programmet etter kvart.</p>
+<ul class="simple">
+<li><p>trille terning</p></li>
+<li><p>trille tre terningar</p></li>
+<li><p>ta vare på dei som er ulike, trille resten på nytt - tre rundar</p></li>
+<li><p>gjenta mange gongar (simulering)</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+
+<span class="c1"># trille antall terninger </span>
+<span class="k">def</span> <span class="nf">trille</span><span class="p">(</span><span class="n">antall</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">antall</span><span class="p">)</span>
+
+<span class="c1"># Sjekke om ls. (både liten, stor og full straight er ok</span>
+<span class="k">def</span> <span class="nf">sjekk_ls</span><span class="p">(</span><span class="n">terningar</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">terningar</span><span class="p">)</span><span class="o">==</span><span class="mi">5</span> <span class="ow">and</span> <span class="n">terningar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">terningar</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> 
+            <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">terningar</span><span class="p">)</span><span class="o">==</span><span class="mi">6</span> <span class="ow">and</span> <span class="n">terningar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">terningar</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># triller etter liten straight på 3 kast</span>
+<span class="k">def</span> <span class="nf">liten_straight</span><span class="p">():</span>
+    <span class="n">ls</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">kast</span> <span class="o">=</span> <span class="n">trille</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">kast</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">kast</span><span class="p">)</span>
+        <span class="n">kast</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kast</span><span class="p">,</span> <span class="n">trille</span><span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">kast</span><span class="p">)))</span>
+
+    <span class="n">kast</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">kast</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sjekk_ls</span><span class="p">(</span><span class="n">kast</span><span class="p">)</span>
+
+<span class="c1"># Sjølve simuleringa</span>
+<span class="n">suksess</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">liten_straight</span><span class="p">():</span>
+        <span class="n">suksess</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Det er </span><span class="si">{</span><span class="n">suksess</span><span class="o">/</span><span class="n">N</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2"> sannsynlighet for å trill liten straight på 3 kast&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Det er 30.06% sannsynlighet for å trill liten straight på 3 kast
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

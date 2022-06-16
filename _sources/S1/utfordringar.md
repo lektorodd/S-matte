@@ -11,7 +11,13 @@ Ikkje sjå på løysingsforslaget før du har prøvd lenge sjølv. Det er god tr
 
 ## Plukke kort på gata
 
-Utfordring frå Abels tårn på NRK P2. 
+````{margin} 
+```{admonition} Abels tårn
+:class: note
+
+Problemet vert lufta [her](https://radio.nrk.no/podkast/abels_taarn/sesong/202106/l_f5197a9a-8a66-4e4e-997a-9a8a669e4e85) første gang og tatt opp att [her](https://radio.nrk.no/podkast/abels_taarn/sesong/202107/l_fcf052d9-977d-400a-b052-d9977df00af5)
+```
+````
 
 Sett at du går rundt i verda og finn eitt og eitt spelekort på gata. Kor mange kort må du finna før du har ein fullstendig kortstokk? 
 
@@ -25,7 +31,7 @@ Forslag til løysing finn du [her](../S1/kortp%C3%A5gata.ipynb)
 
 ## Trille liten straight på tre kast
 
-Kva er sannsynet for å trilla liten straight (1, 2, 3, 4, 5) på ein runde i vanleg Yatzy, altså med 5 terningar? 
+Kva er sannsynet for å trilla liten straight (1, 2, 3, 4, 5) på ein runde i Maxi Yatzy, altså med 6 terningar? 
 Det er tre kast kvar runde og du kan ta vare på dei terningane du vil frå kast til kast. 
 
 ```{admonition} Hint
