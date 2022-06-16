@@ -1,0 +1,16 @@
+title: Programmering i S-matte
+author: Torodd F. Ottestad
+copyright: "2022"
+
+repository:
+  url: https://github.com/lektorodd/S-matte
+  branch: main 
+html:
+  use_edit_page_button: true
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+
+# execute:
+#  execute_notebooks: force

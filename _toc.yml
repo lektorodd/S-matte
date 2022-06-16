@@ -1,0 +1,25 @@
+format: jb-book
+root: index
+parts: 
+- caption: generelt
+  chapters: 
+  - file: generelt/intro-importering
+  - file: generelt/jupyter-lab 
+- caption: S1
+  chapters:
+  - file: S1/simuleringS1
+    sections:
+    - file: S1/terningar
+    - file: S1/samansetteforsøk
+    - file: S1/hypergeometrisk-og-binomisk
+  - file: S1/Kombinatorikk
+  - file: S1/utfordringar 
+    sections: 
+    - file: S1/kortpågata
+    - file: S1/litenstraight
+  - file: S1/oppgåver   
+    sections: 
+    - file: S1/eksamen-V21
+- caption: S2
+  chapters:
+  - file: S2/følgerogrekker  
