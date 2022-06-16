@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eksamen våren 2021 &#8212; Programmering i S-matte</title>
+    <title>V21 - oppgåve 1, del 2 &#8212; Programmering i S-matte</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -46,6 +46,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="&lt;no title&gt;" href="../S2/f%C3%B8lgerogrekker.html" />
@@ -100,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Matematikk for samfunnsfag
+                    Intro
                 </a>
             </li>
         </ul>
@@ -193,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Eksamen våren 2021
+     V21 - oppgåve 1, del 2
     </a>
    </li>
   </ul>
@@ -291,19 +293,51 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/lektorodd/S-matte/edit/main/S1/eksamen-V21.ipynb"
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/lektorodd/S-matte"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="bottom"
-title="Edit this page"
+data-placement="left"
+title="Source repository"
 >
   
 
 <span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
+  <i class="fab fa-github"></i>
   </span>
-
+<span class="headerbtn__text-container">repository</span>
 </a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/lektorodd/S-matte/issues/new?title=Issue%20on%20page%20%2FS1/eksamen-V21.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -350,23 +384,104 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a">
+   a)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b">
+   b)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c">
+   c)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ved-simulering">
+     Ved simulering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ved-formel">
+     Ved formel
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Eksamen våren 2021</h1>
+                <h1>V21 - oppgåve 1, del 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a">
+   a)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b">
+   b)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c">
+   c)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ved-simulering">
+     Ved simulering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ved-formel">
+     Ved formel
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -374,17 +489,204 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="eksamen-varen-2021">
-<h1>Eksamen våren 2021<a class="headerlink" href="#eksamen-varen-2021" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="v21-oppgave-1-del-2">
+<h1>V21 - oppgåve 1, del 2<a class="headerlink" href="#v21-oppgave-1-del-2" title="Permalink to this headline">#</a></h1>
+<p>Her er eit døme på korleis denne eksamensoppgåva kan løysast med simulering. I tillegg er oppgåve c) løyst utan simulering.</p>
+<blockquote>
+<div><p>I tillegg til statsministeren er det 19 ministrar i regjeringa. Av desse 20 er 12 medlemmer i Høgre, 4 er medlemmer i Venstre, og 4 er medlemmer i Kristeleg Folkeparti. <br> Ved eit arrangement er det bestemt at 6 av ministrane skal vere til stades. Desse blir tilfeldig trekte blant de 20 ministrane.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+
+<span class="n">HØGRE</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">VENSTRE</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">KRF</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">UTVAL</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="a">
+<h2>a)<a class="headerlink" href="#a" title="Permalink to this headline">#</a></h2>
+<p>Kva er sannsynet for at alle dei 6 som blir trekte ut, er frå Høgre?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># VARIANT 1 - komprimert</span>
+<span class="n">ngood</span> <span class="o">=</span> <span class="n">HØGRE</span>
+<span class="n">nbad</span> <span class="o">=</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">UTVAL</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">==</span> <span class="n">X</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at alle som vert trekt ut er frå Høgre er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at alle som vert trekt ut er frå Høgre er 0.024
 </pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># VARIANT 2 - løkke </span>
+<span class="n">ngood</span> <span class="o">=</span> <span class="n">HØGRE</span>
+<span class="n">nbad</span> <span class="o">=</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">alle</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">trekk</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">UTVAL</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">trekk</span> <span class="o">==</span> <span class="n">X</span><span class="p">:</span>
+        <span class="n">alle</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="n">alle</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at alle som vert trekt ut er frå Høgre er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at alle som vert trekt ut er frå Høgre er 0.024
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="b">
+<h2>b)<a class="headerlink" href="#b" title="Permalink to this headline">#</a></h2>
+<p>Bestem sannsynet for at statsministeren er blant dei som blir trekte ut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># VARIANT 1 - komprimert</span>
+<span class="n">ngood</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nbad</span> <span class="o">=</span> <span class="p">(</span><span class="n">HØGRE</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">UTVAL</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">==</span> <span class="n">X</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at statsministeren vert trekt er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at statsministeren vert trekt er 0.3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># VARIANT 2 - løkke</span>
+<span class="n">ngood</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nbad</span> <span class="o">=</span> <span class="p">(</span><span class="n">HØGRE</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">erna</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">trekk</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">UTVAL</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">trekk</span> <span class="o">==</span> <span class="n">X</span><span class="p">:</span>
+        <span class="n">erna</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="n">erna</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at statsministeren vert trekt er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at statsministeren vert trekt er 0.3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="c">
+<h2>c)<a class="headerlink" href="#c" title="Permalink to this headline">#</a></h2>
+<p>Bestem sannsynet for at 2 frå Høgre, 2 frå Venstre og 2 frå Kristleg Folkeparti vert trekt ut.</p>
+<div class="important admonition">
+<p class="admonition-title">Obs!</p>
+<p>Her kan me ikkje bruka den vanlege <code class="docutils literal notranslate"><span class="pre">hypergeometric</span></code>-funksjonen sidan populasjonen og utvalet er delt i meir enn 2.</p>
+</div>
+<div class="section" id="ved-simulering">
+<h3>Ved simulering<a class="headerlink" href="#ved-simulering" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ministrar</span> <span class="o">=</span> <span class="p">[</span><span class="n">HØGRE</span><span class="p">,</span> <span class="n">VENSTRE</span><span class="p">,</span> <span class="n">KRF</span><span class="p">]</span>
+
+<span class="n">to_frå_kvar</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">trekk</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">multivariate_hypergeometric</span><span class="p">(</span><span class="n">ministrar</span><span class="p">,</span> <span class="n">UTVAL</span><span class="p">)</span>
+    <span class="n">sjekk</span> <span class="o">=</span> <span class="p">(</span><span class="n">trekk</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">sjekk</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+        <span class="n">to_frå_kvar</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="n">to_frå_kvar</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at det vert trekt to frå kvart parti er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at det vert trekt to frå kvart parti er 0.062
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ved-formel">
+<h3>Ved formel<a class="headerlink" href="#ved-formel" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\frac{\left( 12 \atop 2 \right)\left( 4 \atop 2 \right)\left( 4 \atop 2 \right)}{\left( 20 \atop 6 \right)}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">sc</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="p">(</span><span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">HØGRE</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">VENSTRE</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">KRF</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">HØGRE</span> <span class="o">+</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at det vert trekt to frå kvart parti er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at det vert trekt to frå kvart parti er 0.061
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Litt mindre komprimert, og kanskje meir oversiktleg</span>
+
+<span class="n">binom_H</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">HØGRE</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">binom_V</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">VENSTRE</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">binom_KrF</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">KRF</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">binom_alle</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">HØGRE</span> <span class="o">+</span> <span class="n">VENSTRE</span> <span class="o">+</span> <span class="n">KRF</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="p">(</span><span class="n">binom_H</span> <span class="o">*</span> <span class="n">binom_V</span> <span class="o">*</span> <span class="n">binom_KrF</span><span class="p">)</span> <span class="o">/</span> <span class="n">binom_alle</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for at det vert trekt to frå kvart parti er </span><span class="si">{</span><span class="n">sannsyn</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for at det vert trekt to frå kvart parti er 0.061
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
