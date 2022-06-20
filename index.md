@@ -11,4 +11,6 @@ I den fagfornya varianten av *S-matte* vert det lagt opp til ein del programmeri
 ## Programvare
 Det enklaste er å  innstallera [Anaconda-pakken](https://www.anaconda.com/products/distribution). Der ligg mellom anna `Jupyter Lab` som er eit ypperleg verktøy for den type programmering som er aktuelt i matematikkfaget. I tillegg følger alle dei mest brukte biblioteka (`numpy`, `pandas` og `matplotlib`) med her. Du finn meir informasjon om dette på neste side om du er interessert.
 
+---
 
+Logoen: <a href="https://www.flaticon.com/free-icons/programmer" title="programmer icons">Programmer icons created by juicy_fish - Flaticon</a>

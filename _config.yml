@@ -13,8 +13,7 @@ parse:
   myst_enable_extensions:
     - amsmath
 
+logo: img/programmer.png
+
 #execute:
 #  execute_notebooks: force
-
-# logo.... programmer
-# <a href="https://www.flaticon.com/free-icons/programmer" title="programmer icons">Programmer icons created by juicy_fish - Flaticon</a>
