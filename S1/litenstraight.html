@@ -86,6 +86,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/programmer.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering i S-matte</h1>
@@ -408,6 +413,8 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="liten-straight">
 <h1>Liten straight<a class="headerlink" href="#liten-straight" title="Permalink to this headline">#</a></h1>
+<p>Kva er sannsynet for å trilla liten straight (1, 2, 3, 4, 5) på ein runde i Maxi Yatzy, altså med 6 terningar?
+Det er tre kast kvar runde og du kan ta vare på dei terningane du vil frå kast til kast.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Hint</p>
 <p>Start enkelt og bygg ut programmet etter kvart.</p>
@@ -418,7 +425,7 @@ title="Print to PDF"
 <li><p>gjenta mange gongar (simulering)</p></li>
 </ul>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
@@ -455,12 +462,12 @@ title="Print to PDF"
     <span class="k">if</span> <span class="n">liten_straight</span><span class="p">():</span>
         <span class="n">suksess</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Det er </span><span class="si">{</span><span class="n">suksess</span><span class="o">/</span><span class="n">N</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2"> sannsynlighet for å trill liten straight på 3 kast&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Det er </span><span class="si">{</span><span class="n">suksess</span><span class="o">/</span><span class="n">N</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2"> sannsynlighet for å trille liten straight på 3 kast&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Det er 30.06% sannsynlighet for å trill liten straight på 3 kast
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Det er 29.89% sannsynlighet for å trille liten straight på 3 kast
 </pre></div>
 </div>
 </div>

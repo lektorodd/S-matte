@@ -46,6 +46,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Utfordringar" href="utfordringar.html" />
@@ -86,6 +88,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/programmer.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering i S-matte</h1>
@@ -492,8 +499,8 @@ title="Print to PDF"
 <p>Kombinatorikk handlar om å finna antall kombinasjonar. I dette kapittelet ser me litt på korleis me kan gjera det gjennom programmering - både heilt grunnleggande med løkker og med funksjonar andre har laga.</p>
 <div class="section" id="ordna-utval-med-tilbakelegging">
 <h2>Ordna utval med tilbakelegging.<a class="headerlink" href="#ordna-utval-med-tilbakelegging" title="Permalink to this headline">#</a></h2>
-<p>Me trekk eit utval på $r$ element frå ein populasjon med $n$ element.</p>
-<p>Moglege kombinasjonar er då $$ n\cdot n \cdot n \cdot \ldots \cdot n = n^r $$</p>
+<p>Me trekk eit utval på <span class="math notranslate nohighlight">\(r\)</span> element frå ein populasjon med <span class="math notranslate nohighlight">\(n\)</span> element.</p>
+<p>Moglege kombinasjonar er då $<span class="math notranslate nohighlight">\( n\cdot n \cdot n \cdot \ldots \cdot n = n^r \)</span>$</p>
 <p><strong>Ordna utval:</strong> rekkefølgen er viktig <br>
 <strong>Med tilbakelegging:</strong> kvart element i populasjonen kan trekkast fleire gongar.</p>
 <div class="cell docutils container">
@@ -516,8 +523,8 @@ title="Print to PDF"
 </div>
 <div class="section" id="ordna-utval-utan-tilbakelegging">
 <h2>Ordna utval utan tilbakelegging.<a class="headerlink" href="#ordna-utval-utan-tilbakelegging" title="Permalink to this headline">#</a></h2>
-<p>Trekk eit utval på $r$ element på ein populasjon på $n$.</p>
-<p>Moglege kombinasjonar er då $$ _n P _r  = n\cdot (n-1) \cdot (n-2) \cdot \ldots \cdot (n-r+1)$$</p>
+<p>Trekk eit utval på <span class="math notranslate nohighlight">\(r\)</span> element på ein populasjon på <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Moglege kombinasjonar er då $<span class="math notranslate nohighlight">\( _n P _r  = n\cdot (n-1) \cdot (n-2) \cdot \ldots \cdot (n-r+1)\)</span>$</p>
 <p><strong>Ordna utval:</strong> rekkefølgen er viktig <br>
 <strong>Utan tilbakelegging:</strong> når eit element er trekt kan det ikkje trekkast igjen</p>
 <div class="cell docutils container">
@@ -542,11 +549,11 @@ title="Print to PDF"
 </div>
 <div class="section" id="fakultet">
 <h3>Fakultet<a class="headerlink" href="#fakultet" title="Permalink to this headline">#</a></h3>
-<p>Når $n = r$ når me ser på ordna utval utan tilbakelegging gjer me eit utval som er like stort som populasjonen. I praksis vil det då bli kor mange forskjellige måtar me kan ordna populasjonen.</p>
-<p>Trekk eit utval på $n$ element på ein populasjon på $n$.</p>
-<p>Moglege kombinasjonar er då $$ _n P _n  = n\cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2\cdot 1$$</p>
-<p>Dermed får me $$ _n P _n = n! = 1 \cdot 2 \cdot \ldots \cdot (n-2)\cdot (n-1) \cdot n $$</p>
-<p>$n!$ les me som <em>n fakultet</em> og er produktet av alle dei naturlege tala frå og med $1$ til og med $n$</p>
+<p>Når <span class="math notranslate nohighlight">\(n = r\)</span> når me ser på ordna utval utan tilbakelegging gjer me eit utval som er like stort som populasjonen. I praksis vil det då bli kor mange forskjellige måtar me kan ordna populasjonen.</p>
+<p>Trekk eit utval på <span class="math notranslate nohighlight">\(n\)</span> element på ein populasjon på <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Moglege kombinasjonar er då $<span class="math notranslate nohighlight">\( _n P _n  = n\cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2\cdot 1\)</span>$</p>
+<p>Dermed får me $<span class="math notranslate nohighlight">\( _n P _n = n! = 1 \cdot 2 \cdot \ldots \cdot (n-2)\cdot (n-1) \cdot n \)</span>$</p>
+<p><span class="math notranslate nohighlight">\(n!\)</span> les me som <em>n fakultet</em> og er produktet av alle dei naturlege tala frå og med <span class="math notranslate nohighlight">\(1\)</span> til og med <span class="math notranslate nohighlight">\(n\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
@@ -569,8 +576,8 @@ title="Print to PDF"
 </div>
 <div class="section" id="uordna-utval">
 <h2>Uordna utval<a class="headerlink" href="#uordna-utval" title="Permalink to this headline">#</a></h2>
-<p>Binomialkoeffesient, $_n C_r$, er måten me kan trekka eit utval på $r$ frå ein populasjon på $n$ når rekkefølgen ikkje er viktig.
-$$ \left({n}\atop{r}\right) = \frac{_n P_r}{r!} = \frac{n!}{r!\cdot (n-r)!}$$</p>
+<p>Binomialkoeffesient, <span class="math notranslate nohighlight">\(_n C_r\)</span>, er måten me kan trekka eit utval på <span class="math notranslate nohighlight">\(r\)</span> frå ein populasjon på <span class="math notranslate nohighlight">\(n\)</span> når rekkefølgen ikkje er viktig.
+$<span class="math notranslate nohighlight">\( \left({n}\atop{r}\right) = \frac{_n P_r}{r!} = \frac{n!}{r!\cdot (n-r)!}\)</span>$</p>
 <p>Me kan rekna denne ut i Python med å bruka SciPy-biblioteket:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

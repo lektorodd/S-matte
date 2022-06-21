@@ -86,6 +86,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/programmer.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering i S-matte</h1>
@@ -198,6 +203,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modellering.html">
+   Modellering i S1
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -249,6 +259,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/lektorodd/S-matte/main?urlpath=tree/S1/kortpågata.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -353,12 +392,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trekke-kort-til-ein-har-fullstendig-kortstokk">
+   Trekke kort til ein har fullstendig kortstokk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rekne-ut-snittet-av-fleire-forsok">
+   Rekne ut snittet av fleire forsøk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotte-resultatet-og-gjere-fleire-forsok">
+   Plotte resultatet (og gjere fleire forsøk)
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -370,6 +443,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trekke-kort-til-ein-har-fullstendig-kortstokk">
+   Trekke kort til ein har fullstendig kortstokk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rekne-ut-snittet-av-fleire-forsok">
+   Rekne ut snittet av fleire forsøk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotte-resultatet-og-gjere-fleire-forsok">
+   Plotte resultatet (og gjere fleire forsøk)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -379,7 +475,153 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="plukke-kort-pa-gata">
 <h1>Plukke kort på gata<a class="headerlink" href="#plukke-kort-pa-gata" title="Permalink to this headline">#</a></h1>
-<p>…</p>
+<p>Sett at du går rundt i verda og finn eitt og eitt spelekort på gata. Kor mange kort må du finna før du har ein fullstendig kortstokk?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="trekke-kort-til-ein-har-fullstendig-kortstokk">
+<h2>Trekke kort til ein har fullstendig kortstokk<a class="headerlink" href="#trekke-kort-til-ein-har-fullstendig-kortstokk" title="Permalink to this headline">#</a></h2>
+<p>Det første me må laga er ei simulering som trekk eitt og eitt kort heilt til me har ein full kortstokk. Me må og ha kontroll på kor mange kort me har trekt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lager tom liste for dei trekte korta</span>
+<span class="n">trekt</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># trekk eit kort</span>
+<span class="c1"># viss me ikkje har trekt det før legg me det til i lista</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">trekt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">52</span><span class="p">:</span>
+    <span class="n">kort</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">kort</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">trekt</span><span class="p">:</span>
+        <span class="n">trekt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kort</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lagar ein funksjon av dette, der me òg held oversikt på kor mange forsøk me har brukt. På denne måten kan me enkelt gjera forsøket mange gongar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trekkeKort</span><span class="p">():</span>
+    <span class="n">trekt</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">kortnr</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">trekt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">52</span><span class="p">:</span>
+        <span class="n">kort</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+        
+        <span class="n">kortnr</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="k">if</span> <span class="n">kort</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">trekt</span><span class="p">:</span>
+            <span class="n">trekt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kort</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">kortnr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trekkeKort</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rekne-ut-snittet-av-fleire-forsok">
+<h2>Rekne ut snittet av fleire forsøk<a class="headerlink" href="#rekne-ut-snittet-av-fleire-forsok" title="Permalink to this headline">#</a></h2>
+<p>Me er interessert i å sjå om antall kort ein må trekkja stabiliserer seg rundt eit tal, dersom me repeterer forsøket mange gongar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">forsøk</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">forsøk</span><span class="p">):</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trekkeKort</span><span class="p">())</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gjennomsnitt: </span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kortaste tur: </span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lengeste tur: </span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gjennomsnitt: 235.7131
+Kortaste tur: 102
+Lengeste tur: 719
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotte-resultatet-og-gjere-fleire-forsok">
+<h2>Plotte resultatet (og gjere fleire forsøk)<a class="headerlink" href="#plotte-resultatet-og-gjere-fleire-forsok" title="Permalink to this headline">#</a></h2>
+<p>Reknar ut gjennomsnittet etter N forsøk og plottar gjennomsnittet opp mot antall forsøk. Aukar i tillegg antall forsøk til 1.000.000. Plottar med logaritmisk x-akse.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forsøk</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">forsøk</span><span class="p">):</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trekkeKort</span><span class="p">())</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Antall forsøk (N) og kumulativt gjennomsnitt (n)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">forsøk</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="c1"># Plotting</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mf">235.978</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">forsøk</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="c1"># teoretisk sannsyn</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Antall forsøk&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Gjennomsnitt&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Trekke kort på gata&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gjennomsnitt:&quot;</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kortaste tur:&quot;</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lengste tur:&quot;</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">/var/folders/yz/lz5rd10n0g39x7_qysj8zrrc0000gn/T/ipykernel_8170/3111852025.py</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">forsøk</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trekkeKort</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nn">/var/folders/yz/lz5rd10n0g39x7_qysj8zrrc0000gn/T/ipykernel_8170/2807093341.py</span> in <span class="ni">trekkeKort</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">trekt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">52</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>         <span class="n">kort</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">kortnr</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
