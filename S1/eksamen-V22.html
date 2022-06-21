@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eksamensoppgåver &#8212; Programmering i S-matte</title>
+    <title>V22 - oppgåve 4, del 2 &#8212; Programmering i S-matte</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,8 +48,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="V21 - oppgåve 1, del 2" href="eksamen-V21.html" />
-    <link rel="prev" title="Liten straight" href="litenstraight.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,7 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
   S1
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="simuleringS1.html">
    Simulering
@@ -186,11 +184,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="oppg%C3%A5ver.html">
    Eksamensoppgåver
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
@@ -259,6 +257,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/lektorodd/S-matte/main?urlpath=tree/S1/eksamen-V22.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -298,7 +325,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/lektorodd/S-matte/issues/new?title=Issue%20on%20page%20%2FS1/oppgåver.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/lektorodd/S-matte/issues/new?title=Issue%20on%20page%20%2FS1/eksamen-V22.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -326,7 +353,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/S1/oppgåver.md"
+        <a href="../_sources/S1/eksamen-V22.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -337,7 +364,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -375,7 +402,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Eksamensoppgåver</h1>
+                <h1>V22 - oppgåve 4, del 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -387,14 +414,46 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="eksamensoppgaver">
-<h1>Eksamensoppgåver<a class="headerlink" href="#eksamensoppgaver" title="Permalink to this headline">#</a></h1>
-<p>Løysing av tidlegare eksamensoppgåver</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="eksamen-V21.html"><span class="doc">V21 - oppgåve 1, del 2</span></a></p></li>
-<li><p><a class="reference internal" href="eksamen-V22.html"><span class="doc">V22 - oppgåve 4, del 2</span></a></p></li>
-</ul>
-<div class="toctree-wrapper compound">
+  <div class="tex2jax_ignore mathjax_ignore section" id="v22-oppgave-4-del-2">
+<h1>V22 - oppgåve 4, del 2<a class="headerlink" href="#v22-oppgave-4-del-2" title="Permalink to this headline">#</a></h1>
+<p>Oppgåve tilpassa ny læreplan. Simulering for å finne sannsynet av terningkast.</p>
+<blockquote>
+<div><p>I eit spel kastar du tre terningar. Du multipliserer saman augetalet på terningane. Dersom dette produktet er større enn 100, vinn du.</p>
+<p>Bestem sannsynet for å vinne ved å køyre simuleringar.
+Hugs å vise korleis du kjem fram til svaret.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+
+<span class="c1"># antall terningar</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+
+<span class="c1"># triller tre terningar</span>
+<span class="n">terning1</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="n">terning2</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="n">terning3</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1"># finn produktet (kast for kast)</span>
+<span class="n">produkt</span> <span class="o">=</span> <span class="n">terning1</span> <span class="o">*</span> <span class="n">terning2</span> <span class="o">*</span> <span class="n">terning3</span>
+
+<span class="c1"># antall produkt som er større enn 100</span>
+<span class="n">større_enn_100</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">produkt</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># reknar ut sannsynet</span>
+<span class="n">sannsyn</span> <span class="o">=</span> <span class="n">større_enn_100</span> <span class="o">/</span> <span class="n">N</span>
+
+<span class="c1"># skriv ut svaret</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sannsynet for produkt større enn 100 er </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">sannsyn</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sannsynet for produkt større enn 100 er 0.092
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -425,20 +484,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="litenstraight.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Liten straight</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="eksamen-V21.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">V21 - oppgåve 1, del 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
