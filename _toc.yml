@@ -20,6 +20,8 @@ parts:
   - file: S1/oppgåver   
     sections: 
     - file: S1/eksamen-V21
+    - file: S1/eksamen-V22
+  - file: S1/modellering
 - caption: S2
   chapters:
   - file: S2/følgerogrekker  

@@ -12,8 +12,13 @@ html:
 parse:
   myst_enable_extensions:
     - amsmath
+    - dollarmath
+    - colon_fence
+  myst_dmath_double_inline: True
 
 logo: img/programmer.png
+
+
 
 #execute:
 #  execute_notebooks: force
