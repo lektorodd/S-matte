@@ -658,6 +658,24 @@ title="Print to PDF"
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">np.append</span></code> brukar me for å legga til eit nytt element i arrayen.</p>
 <p><code class="docutils literal notranslate"><span class="pre">a[-1]</span></code> gjev oss det siste leddet i arrayen.</p>
+<p>Ser me på Fibonacci-dømet kan me gjera det same her:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">fib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fib</span><span class="p">,</span> <span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  1   1   2   3   5   8  13  21  34  55  89 144]
+</pre></div>
+</div>
+</div>
+</div>
 <p>Å bruka arrays kan vera ein føremon når me skal vidare til rekker. I tillegg kan me enkelt laga enkle talfølger ved hjelp av <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>, til dømes dei naturlege tala:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
